@@ -145,9 +145,9 @@ input:focus, textarea:focus{border-color:var(--accent)}
 .contact-details ul{list-style:none; padding:0; margin:.2rem 0 1rem}
 .contact-details a{color:#cfe1ff; text-decoration:none}
 .contact-details a:hover{text-decoration:underline}
-.socials {display: flex; align-items: center; gap: 10px;}
-.icon {display: inline-flex; width: 42px; height: 42px; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 10px; background: #0c0f16;}
-.icon svg {width: 22px; height: 22px; fill: #cfe1ff;}
+.socials{display:flex; gap:10px}
+.icon{display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; border:1px solid var(--border); border-radius:10px; background:#0c0f16}
+.icon svg{width:22px; height:22px; fill:#cfe1ff}
 
 /* Footer */
 ./* Footer: show as unordered list */
