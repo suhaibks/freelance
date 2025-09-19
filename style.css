@@ -151,10 +151,10 @@ input:focus, textarea:focus{border-color:var(--accent)}
 
 /* Footer */
 ./* Footer: show as unordered list */
-.site-footer .footer-links {list-style: none; display: block; padding-left: 1.25rem;  margin: 0;}
+.site-footer .footer-links {list-style-type: none; display: block; padding-left: 1.25rem;  margin: 0;}
 .site-footer .footer-links li{display: list-item; margin: 6px 0;}
 .footer-grid{display:grid; gap:14px}
-.footer-links {list-style: none; padding-left: 20px; display: block;}
+.footer-links {list-style-type: none; padding-left: 20px; display: block;}
 .footer-links li {margin-bottom: 8px;}
 .footer-links a {color: var(--muted);text-decoration: none;}
 .footer-links a:hover {color: #fff;}
