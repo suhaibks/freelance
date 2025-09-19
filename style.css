@@ -152,9 +152,10 @@ input:focus, textarea:focus{border-color:var(--accent)}
 /* Footer */
 .site-footer{border-top:1px solid var(--border); padding:32px 0; background:#0e121a}
 .footer-grid{display:grid; gap:14px}
-.footer-links{list-style:none; padding:0; margin:0; display:flex; gap:12px; flex-wrap:wrap}
-.footer-links a{color:var(--muted); text-decoration:none}
-.footer-links a:hover{color:#fff}
+.footer-links {list-style: disc; padding-left: 20px; display: block;}
+.footer-links li {margin-bottom: 8px;}
+.footer-links a {color: var(--muted);text-decoration: none;}
+.footer-links a:hover {color: #fff;}
 .copy{color:var(--muted)}
 
 /* Reveal on scroll */
