@@ -32,6 +32,10 @@ body{
   position:sticky; top:0; z-index:50;
   backdrop-filter:saturate(1.2) blur(8px);
   background:rgba(15,17,21,.6); border-bottom:1px solid var(--border);
+  display:flex;                    /* ADD */
+  align-items:center;              /* ADD */
+  justify-content:space-between;   /* ADD */
+  padding: 0 16px;                 /* OPTIONAL: keeps edges tidy */
 }
 .site-header .logo{
   color:#fff; text-decoration:none; font-weight:700; letter-spacing:.4px; font-size:1.2rem; margin:12px 0; display:inline-block
