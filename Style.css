@@ -1,0 +1,140 @@
+:root{
+  --bg:#0f1115;           /* dark gray */
+  --card:#151923;
+  --text:#e9eef5;
+  --muted:#b7c0cc;
+  --accent:#2f80ed;       /* blue accent; switch to #10b981 for green */
+  --accent-2:#5aa1ff;
+  --border:#232839;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color:var(--text);
+  background:linear-gradient(180deg,#0f1115 0%, #0e121b 100%);
+  line-height:1.6;
+}
+
+/* Layout helpers */
+.container{width:min(1100px,92%); margin:0 auto}
+.section{padding:80px 0}
+.section.alt{background:linear-gradient(180deg,#101420 0%, #0f131d 100%)}
+.center{text-align:center}
+.grid-2{display:grid; gap:40px}
+@media(min-width:900px){ .grid-2{grid-template-columns: 1.1fr .9fr;} }
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(1.2) blur(8px);
+  background:rgba(15,17,21,.6); border-bottom:1px solid var(--border);
+}
+.site-header .logo{
+  color:#fff; text-decoration:none; font-weight:700; letter-spacing:.4px; font-size:1.2rem; margin:12px 0; display:inline-block
+}
+.site-header .logo span{color:var(--accent)}
+.site-header nav{display:flex; align-items:center; justify-content:space-between; gap:24px}
+.site-header .nav-links{list-style:none; margin:0; padding:0; display:flex; gap:20px}
+.site-header .nav-links a{color:var(--muted); text-decoration:none; font-weight:500}
+.site-header .nav-links a:hover{color:#fff}
+
+/* Mobile nav */
+.nav-toggle{display:none; background:none; border:0; cursor:pointer}
+.nav-toggle span{display:block; width:22px; height:2px; background:#fff; margin:4px 0}
+@media(max-width:860px){
+  .nav-toggle{display:block}
+  .site-header .nav-links{
+    position:absolute; right:16px; top:54px; background:var(--card);
+    border:1px solid var(--border); border-radius:12px; padding:12px; flex-direction:column; display:none; width:220px; box-shadow:var(--shadow)
+  }
+  .site-header .nav-links.show{display:flex}
+}
+
+/* Hero */
+.hero{padding-top:96px}
+.tagline{font-size:1.1rem; color:var(--muted); margin:.2rem 0 1rem}
+.sub{color:var(--muted); max-width:60ch; margin-inline:auto}
+.hero-art img{width:100%; height:auto; border-radius:16px; border:1px solid var(--border); box-shadow:var(--shadow)}
+h1{font-size:clamp(2rem, 3.6vw + 1rem, 3.5rem); line-height:1.1; margin:.2rem 0 0}
+h2{font-size:clamp(1.6rem, 2.2vw + .6rem, 2.2rem); margin:0 0 10px}
+h3{margin:.4rem 0 .3rem}
+
+/* Buttons */
+.btn{
+  display:inline-block; padding:12px 20px; border-radius:12px; border:1px solid transparent;
+  background:linear-gradient(180deg,var(--accent), var(--accent-2));
+  color:#fff; text-decoration:none; font-weight:600; box-shadow:var(--shadow)
+}
+.btn:hover{opacity:.95}
+.btn-ghost{
+  background:transparent; border:1px solid var(--border); color:#fff; margin-left:10px
+}
+.btn-small{padding:8px 14px; font-size:.9rem}
+
+/* About */
+.headshot{width:100%; border-radius:16px; border:1px solid var(--border); box-shadow:var(--shadow)}
+.about-tags{display:flex; flex-wrap:wrap; gap:10px; padding:0; list-style:none}
+.about-tags li{padding:8px 12px; border:1px solid var(--border); border-radius:999px; background:#0c0f16; color:#d5dbea}
+
+/* Cards (Services) */
+.cards{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); margin-top:20px}
+.card{
+  background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px;
+  box-shadow:var(--shadow); transition:transform .2s ease
+}
+.card:hover{transform:translateY(-3px)}
+.price{margin-top:12px; color:#a6b3c6; font-weight:600}
+
+/* Portfolio */
+.portfolio-grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); margin-top:20px}
+.work-card{
+  display:block; text-decoration:none; color:inherit;
+  background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; box-shadow:var(--shadow)
+}
+.work-card img{width:100%; height:200px; object-fit:cover; display:block}
+.work-meta{padding:14px}
+.work-meta h3{margin:0 0 6px}
+
+/* Testimonials */
+.testimonials{display:grid; gap:16px; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); margin-top:20px}
+.testimonial{
+  margin:0; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow)
+}
+.testimonial footer{color:var(--muted); margin-top:8px}
+
+/* Contact */
+.contact-wrap{align-items:start}
+.contact-form{
+  background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow)
+}
+label{display:block; font-weight:600; margin-bottom:10px}
+input, textarea{
+  width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:#0c0f16; color:#e6ecf6;
+  margin-top:6px; font:inherit; outline:none
+}
+input:focus, textarea:focus{border-color:var(--accent)}
+.form-msg{margin:.6rem 0 0; color:var(--muted)}
+.contact-details h3{margin-top:0}
+.contact-details ul{list-style:none; padding:0; margin:.2rem 0 1rem}
+.contact-details a{color:#cfe1ff; text-decoration:none}
+.contact-details a:hover{text-decoration:underline}
+.socials{display:flex; gap:10px}
+.icon{display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; border:1px solid var(--border); border-radius:10px; background:#0c0f16}
+.icon svg{width:22px; height:22px; fill:#cfe1ff}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border); padding:32px 0; background:#0e121a}
+.footer-grid{display:grid; gap:14px}
+.footer-links{list-style:none; padding:0; margin:0; display:flex; gap:12px; flex-wrap:wrap}
+.footer-links a{color:var(--muted); text-decoration:none}
+.footer-links a:hover{color:#fff}
+.copy{color:var(--muted)}
+
+/* Reveal on scroll */
+.reveal{opacity:0; transform:translateY(16px); will-change:transform, opacity}
+.reveal.visible{opacity:1; transform:none; transition:opacity .6s ease, transform .6s ease}
+.accent{background:linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
