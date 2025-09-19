@@ -40,6 +40,25 @@ body{
 .site-header .logo{
   color:#fff; text-decoration:none; font-weight:700; letter-spacing:.4px; font-size:1.2rem; margin:12px 0; display:inline-block
 }
+.site-header nav{
+  display:flex; align-items:center; gap:24px;
+  margin-left:auto;                 /* ADD */
+}
+
+/* Mobile nav */
+@media(max-width:860px){
+  .nav-toggle{display:block; order:2; margin-left:12px;} /* NEW: push toggle to the end (right) */
+  .site-header .nav-links{
+    position:absolute; right:16px; top:54px; background:var(--card);
+    border:1px solid var(--border); border-radius:12px; padding:12px;
+    flex-direction:column; display:none; width:220px; box-shadow:var(--shadow)
+  }
+}
+
+/* Desktop: keep toggle hidden */
+@media(min-width:861px){
+  .nav-toggle{display:none;}
+}
 .site-header .logo span{color:var(--accent)}
 .site-header nav{display:flex; align-items:center; justify-content:space-between; gap:24px}
 .site-header .nav-links{list-style:none; margin:0; padding:0; display:flex; gap:20px}
