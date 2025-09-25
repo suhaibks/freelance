@@ -130,7 +130,7 @@ h3{margin:.4rem 0 .3rem}
 .testimonial footer{color:var(--muted); margin-top:8px}
 
 /* Contact */
-.contact-wrap{align-items:start}
+.contact-wrap{align-items:start; justify-content: center;}
 .contact-form{
   background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow)
 }
