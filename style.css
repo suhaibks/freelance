@@ -134,7 +134,6 @@ h3{margin:.4rem 0 .3rem}
   display: flex;
   justify-content: center;  /* Centers horizontally */
   align-items: center;      /* Centers vertically */
-  min-height: 100vh;        /* Full screen height */
 }
 
 .contact-form {
