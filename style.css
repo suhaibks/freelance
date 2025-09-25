@@ -130,10 +130,23 @@ h3{margin:.4rem 0 .3rem}
 .testimonial footer{color:var(--muted); margin-top:8px}
 
 /* Contact */
-.contact-wrap{align-items:start; justify-content: center;}
-.contact-form{
-  background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow)
+.contact-wrap {
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;      /* Centers vertically */
+  min-height: 100vh;        /* Full screen height */
 }
+
+.contact-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 500px; /* Keep form from stretching too much */
+}
+
 label{display:block; font-weight:600; margin-bottom:10px}
 input, textarea{
   width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:#0c0f16; color:#e6ecf6;
